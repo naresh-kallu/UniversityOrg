@@ -1,0 +1,23 @@
+package com.loyola.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.loyola.dao.StudentRepository;
+import com.loyola.entity.StudentEntity;
+
+@RestController
+public class StudentController {
+	@Autowired
+	StudentRepository repository;
+	@GetMapping("/getFail/{marks}")
+	public List<StudentEntity> getFailData(@PathVariable("marks") int marks,StudentEntity entity){
+		return repository.findAllLessMarks(marks, entity);
+	}
+	
+
+}
