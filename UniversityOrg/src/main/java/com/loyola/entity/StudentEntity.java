@@ -27,6 +27,7 @@ public class StudentEntity {
 		this.name = name;
 		this.marks = marks;
 		this.age = age;
+		System.out.println(marks);
 	}
 	public StudentEntity() {
 		super();

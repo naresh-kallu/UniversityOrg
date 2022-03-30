@@ -24,4 +24,10 @@ public class LoyolaServiceImpl implements LoyolaServiceInt {
 		return loyolaRepository.findAll();
 	}
 
+	@Override
+	public List<LoyolaEntity> saveAboveMarks(int marks, LoyolaEntity entity) {
+	
+		return null;
+	}
+
 }
